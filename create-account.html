@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Create Account | Stackly
+  </title>
+  <meta content="Stackly identity and access management" name="description"/>
+  <link href="assets/logo/logo.webp" rel="icon"/>
+  <link href="css/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <nav aria-label="Main">
+   <div class="wrap">
+    <a aria-label="Stackly home" class="logo" href="index.html">
+     <img alt="Stackly logo" src="assets/logo/logo.webp"/>
+    </a>
+    <button aria-expanded="false" aria-label="Toggle menu" aria-controls="nav-menu" class="burger">
+     Menu
+    </button>
+    <div class="nav-menu" id="nav-menu">
+        <ul class="nav-main">
+<li>
+      <a class="l" href="index.html">
+       Home
+      </a>
+     </li>
+<li>
+      <a class="l" href="about.html">
+       About
+      </a>
+     </li>
+<li>
+      <a class="l" href="services.html">
+       Services
+      </a>
+     </li>
+<li>
+      <a class="l" href="blog.html">
+       Blog
+      </a>
+     </li>
+<li>
+      <a class="l" href="contact.html">
+       Contact
+      </a>
+     </li>
+        </ul>
+        <ul class="nav-actions">
+<li>
+      <a class="l" href="login.html">
+       Login
+      </a>
+     </li>
+<li>
+      <a class="btn p" href="create-account.html" style="padding:8px 20px">
+       Create Account
+      </a>
+     </li>
+        </ul>
+      </div>
+   </div>
+  </nav>
+  <main class="auth">
+   <div class="card">
+    <form data-form="register" novalidate="">
+     <h1>
+      Create your account
+     </h1>
+     <p>
+      Choose how you will use Stackly.
+     </p>
+     <div aria-label="Choose account type" class="roles" role="group">
+      <button aria-pressed="false" class="role admin" data-role="admin" type="button">
+       <b>
+        Admin
+       </b>
+       <small>
+        Manage identities
+       </small>
+      </button>
+      <button aria-pressed="false" class="role public" data-role="public" type="button">
+       <b>
+        Public
+       </b>
+       <small>
+        Manage my account
+       </small>
+      </button>
+     </div>
+     <div class="err" id="roleErr" role="alert">
+     </div>
+     <div class="fld">
+      <label for="first">
+       First name
+      </label>
+      <input aria-describedby="e-first" autocomplete="given-name" data-v="name" id="first" name="first" type="text"/>
+      <div class="err" id="e-first" role="alert">
+      </div>
+     </div>
+     <div class="fld">
+      <label for="last">
+       Last name
+      </label>
+      <input aria-describedby="e-last" autocomplete="family-name" data-v="name" id="last" name="last" type="text"/>
+      <div class="err" id="e-last" role="alert">
+      </div>
+     </div>
+     <div class="fld">
+      <label for="email">
+       Email
+      </label>
+      <input aria-describedby="e-email" autocomplete="email" data-v="email" id="email" name="email" type="email"/>
+      <div class="err" id="e-email" role="alert">
+      </div>
+     </div>
+     <div class="fld">
+      <label for="password">
+       Password
+      </label>
+      <div class="pw">
+       <input aria-describedby="e-password" autocomplete="new-password" data-v="password" id="password" name="password" type="password"/>
+       <button aria-label="Show password" type="button">
+        Show
+       </button>
+      </div>
+      <div class="err" id="e-password" role="alert">
+      </div>
+     </div>
+     <div class="fld">
+      <label for="confirm">
+       Confirm password
+      </label>
+      <div class="pw">
+       <input aria-describedby="e-confirm" autocomplete="new-password" data-v="confirm" id="confirm" name="confirm" type="password"/>
+       <button aria-label="Show password" type="button">
+        Show
+       </button>
+      </div>
+      <div class="err" id="e-confirm" role="alert">
+      </div>
+     </div>
+     <button class="btn p" type="submit">
+      Create Account
+     </button>
+     <p class="row">
+      Have an account?
+      <a href="login.html">
+       Login
+      </a>
+     </p>
+    </form>
+    <div class="ok-msg" role="status">
+     <svg viewbox="0 0 90 90">
+      <circle cx="45" cy="45" fill="#34D399" r="40">
+      </circle>
+      <path d="M26 46l14 14 25-28" fill="none" stroke="#2B0F3F" stroke-linecap="round" stroke-linejoin="round" stroke-width="7">
+      </path>
+     </svg>
+     <h1>
+      Account created
+     </h1>
+     <p>
+      Taking you to login…
+     </p>
+    </div>
+   </div>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js">
+  </script>
+  <script src="js/main.js">
+  </script>
+  <script src="js/auth.js">
+  </script>
+ </body>
+</html>

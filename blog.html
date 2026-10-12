@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>
+   Blog | Stackly
+  </title>
+<meta content="Stackly identity and access management" name="description"/>
+<link href="assets/logo/logo.webp" rel="icon"/>
+<link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<nav aria-label="Main">
+<div class="wrap">
+<a aria-label="Stackly home" class="logo" href="index.html">
+<img alt="Stackly logo" src="assets/logo/logo.webp"/>
+</a>
+<button aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle menu" class="burger">
+     Menu
+    </button>
+<div class="nav-menu" id="nav-menu">
+<ul class="nav-main">
+<li>
+<a class="l" href="index.html">
+        Home
+       </a>
+</li>
+<li>
+<a class="l" href="about.html">
+        About
+       </a>
+</li>
+<li>
+<a class="l" href="services.html">
+        Services
+       </a>
+</li>
+<li>
+<a class="l on" href="blog.html">
+        Blog
+       </a>
+</li>
+<li>
+<a class="l" href="contact.html">
+        Contact
+       </a>
+</li>
+</ul>
+<ul class="nav-actions">
+<li>
+<a class="l" href="login.html">
+        Login
+       </a>
+</li>
+<li>
+<a class="btn p" href="create-account.html" style="padding:8px 20px">
+        Create Account
+       </a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<main>
+<header class="ph ph-feature dark">
+<div class="wrap">
+<h1>
+<span>
+<b>
+        Ideas
+       </b>
+</span>
+<span>
+<b>
+        for
+       </b>
+</span>
+<span>
+<b>
+        safer
+       </b>
+</span>
+<span>
+<b>
+        access.
+       </b>
+</span>
+</h1>
+<p class="lead">
+      Practical writing on Zero Trust, authentication and access control.
+     </p>
+<div class="ph-highlights" aria-label="Article topics">
+<span>Zero Trust</span><span>Authentication</span><span>Access control</span>
+</div>
+</div>
+<div class="ph-visual" role="img" aria-label="Ideas for safer access connect identity, verification, access and trust">
+<div class="ph-orbit ph-orbit-outer"></div>
+<div class="ph-orbit ph-orbit-inner"></div>
+<span class="ph-core">S</span>
+<span class="ph-node ph-node-top">Identity</span>
+<span class="ph-node ph-node-right">Verify</span>
+<span class="ph-node ph-node-bottom">Access</span>
+<span class="ph-node ph-node-left">Trust</span>
+</div>
+</header>
+<section id="featured">
+<div class="wrap">
+<article class="feat">
+<div aria-hidden="true" class="fa"><img alt="Teal LED panel glowing in the dark" class="web pf" decoding="async" loading="lazy" onerror="this.remove()" onload="this.classList.add('in');this.parentNode.classList.add('has-photo')" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?fm=webp&amp;fit=crop&amp;w=1000&amp;q=70"/>
+<span class="s1">
+</span>
+<span class="s2">
+</span>
+<span class="s3">
+</span>
+<svg aria-hidden="true" class="gl" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 60 60">
+<path d="M30 6 52 14v16c0 14-9 22-22 26C17 52 8 44 8 30V14z">
+</path>
+<path d="M20 30l7 7 14-15">
+</path>
+</svg>
+</div>
+<div class="fc2">
+<span class="tag">
+        Featured
+       </span>
+<span class="tag t2">
+        Zero Trust
+       </span>
+<h2>
+        Zero Trust starts with one question: who is asking?
+       </h2>
+<p>
+        Why every request deserves verification, not just the first login, and how to start without rebuilding your network.
+       </p>
+<div class="by">
+<span class="av2">
+         AR
+        </span>
+<span>
+         Anika Rao
+         <small>
+          Oct 2, 2026 · 6 min read
+         </small>
+</span>
+</div>
+<button aria-expanded="false" class="btn p" data-read="">
+        Read the story
+       </button>
+<div class="more">
+<p>
+         Begin with strong identity, add device health, then enforce least privilege on every resource. Each step reduces risk on its own, so you gain value from the first week.
+        </p>
+</div>
+</div>
+</article>
+</div>
+</section>
+<section id="articles" style="padding-top:20px">
+<div class="wrap">
+<h2>
+      Latest articles
+     </h2>
+<div aria-label="Filter by topic" class="fchips" role="group">
+<button aria-pressed="true" class="fchip on" data-f="all">
+       All
+      </button>
+<button aria-pressed="false" class="fchip" data-f="Zero Trust">
+       Zero Trust
+      </button>
+<button aria-pressed="false" class="fchip" data-f="MFA">
+       MFA
+      </button>
+<button aria-pressed="false" class="fchip" data-f="Identity Security">
+       Identity Security
+      </button>
+<button aria-pressed="false" class="fchip" data-f="Cybersecurity">
+       Cybersecurity
+      </button>
+<button aria-pressed="false" class="fchip" data-f="Access Control">
+       Access Control
+      </button>
+<button aria-pressed="false" class="fchip" data-f="Passwordless">
+       Passwordless
+      </button>
+<button aria-pressed="false" class="fchip" data-f="IAM Best Practices">
+       IAM Best Practices
+      </button>
+</div>
+<p aria-live="polite" class="fcount" id="fcount">
+      Showing 10 articles
+     </p>
+<div class="mag">
+<article class="bp spot" data-cat="MFA">
+<div class="bi" style="--a:#4A1768;--b:#E11D8F;--h:220px"><img alt="Smartphone showing a security lock" class="web pf" decoding="async" loading="lazy" onerror="this.remove()" onload="this.classList.add('in');this.parentNode.classList.add('has-photo')" src="https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?fm=webp&amp;fit=crop&amp;w=800&amp;q=70"/>
+<svg aria-hidden="true" class="gl" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 60 60">
+<rect height="48" rx="6" width="24" x="18" y="6">
+</rect>
+<circle cx="30" cy="44" r="2">
+</circle>
+<path d="M24 16h12">
+</path>
+</svg>
+</div>
+<div class="pc">
+<span class="tag">
+         MFA
+        </span>
+<time>
+         Sep 24, 2026
+        </time>
+<h3>
+         Which MFA method fits which user?
+        </h3>
+<p>
+         Push, passkeys and hardware keys compared.
+        </p>
+<div class="by">
+<span class="av2">
+          DO
+         </span>
+<span>
+          Daniel Okafor
+          <small>
+           5 min read
+          </small>
+</span>
+</div>
+<button aria-expanded="false" class="btn p sm2" data-read="">
+         Read more
+        </button>
+<div class="more">
+<p>
+          Match the method to the risk: passkeys for staff, hardware keys for administrators, and push only with number matching.
+         </p>
+</div>
+</div>
+</article>
+<article class="bp spot" data-cat="Zero Trust">
+<div class="bi" style="--a:#10B981;--b:#4A1768;--h:170px"><img alt="Laptop screen glowing blue" class="web pf" decoding="async" loading="lazy" onerror="this.remove()" onload="this.classList.add('in');this.parentNode.classList.add('has-photo')" src="https://images.unsplash.com/photo-1548092372-0d1bd40894a3?fm=webp&amp;fit=crop&amp;w=800&amp;q=70"/>
+<svg aria-hidden="true" class="gl" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 60 60">
+<path d="M30 6 52 14v16c0 14-9 22-22 26C17 52 8 44 8 30V14z">
+</path>
+<path d="M20 30l7 7 14-15">
+</path>
+</svg>
+</div>
+<div class="pc">
+<span class="tag">
+         Zero Trust
+        </span>
+<time>
+         Sep 18, 2026
+        </time>
+<h3>
+         Microsegmentation or identity-first Zero Trust?
+        </h3>
+<p>
+         Where each approach helps, and where it falls short.
+        </p>
+<div class="by">
+<span class="av2">
+          AR
+         </span>
+<span>
+          Anika Rao
+          <small>
+           7 min read
+          </small>
+</span>
+</div>
+<button aria-expanded="false" class="btn p sm2" data-read="">
+         Read more
+        </button>
+<div class="more">
+<p>
+          Network segments limit blast radius, but identity decides who gets in. Start with identity, then segment around your crown jewels.
+         </p>
+</div>
+</div>
+</article>
+<article class="bp spot" data-cat="Identity Security">
+<div class="bi" style="--a:#FBBF24;--b:#E11D8F;--h:250px"><img alt="Padlock on a laptop with light trails" class="web pf" decoding="async" loading="lazy" onerror="this.remove()" onload="this.classList.add('in');this.parentNode.classList.add('has-photo')" src="https://images.unsplash.com/photo-1614064548237-096f735f344f?fm=webp&amp;fit=crop&amp;w=800&amp;q=70"/>
+<svg aria-hidden="true" class="gl" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 60 60">
+<circle cx="30" cy="20" r="10">
+</circle>
+<path d="M10 54c0-14 9-22 20-22s20 8 20 22">
+</path>
+</svg>
+</div>
+<div class="pc">
+<span class="tag">
+         Identity Security
+        </span>
+<time>
+         Sep 15, 2026
+        </time>
+<h3>
+         Five signs your identity perimeter is leaking
+        </h3>
+<p>
+         Stale accounts and shared logins are the usual suspects.
+        </p>
+<div class="by">
+<span class="av2">
+          ML
+         </span>
+<span>
+          Mei Lin
+          <small>
+           4 min read
+          </small>
+</span>
+</div>
+<button aria-expanded="false" class="btn p sm2" data-read="">
+         Read more
+        </button>
+<div class="more">
+<p>
+          Run an access review, remove dormant accounts, rotate shared secrets, and alert on logins from new devices.
+         </p>
+</div>
+</div>
+</article>
+<article class="bp spot" data-cat="Cybersecurity">
+<div class="bi" style="--a:#FB7185;--b:#4A1768;--h:190px"><img alt="Red padlock on a computer keyboard" class="web pf" decoding="async" loading="lazy" onerror="this.remove()" onload="this.classList.add('in');this.parentNode.classList.add('has-photo')" src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?fm=webp&amp;fit=crop&amp;w=800&amp;q=70"/>
+<svg aria-hidden="true" class="gl" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 60 60">
+<rect height="26" rx="6" width="36" x="12" y="26">
+</rect>
+<path d="M20 26v-8a10 10 0 0 1 20 0v8">
+</path>
+<circle cx="30" cy="39" r="3">
+</circle>
+</svg>
+</div>
+<div class="pc">
+<span class="tag">
+         Cybersecurity
+        </span>
+<time>
+         Sep 3, 2026
+        </time>
+<h3>
+         Why credential stuffing still works
+        </h3>
+<p>
+         Reused passwords make attacks cheap.
+        </p>
+<div class="by">
+<span class="av2">
+          CM
+         </span>
+<span>
+          Carlos Mendes
+          <small>
+           5 min read
+          </small>
+</span>
+</div>
+<button aria-expanded="false" class="btn p sm2" data-read="">
+         Read more
+        </button>
+<div class="more">
+<p>
+          Block breached passwords, rate-limit sign-ins by risk, and move your riskiest users to passkeys first.
+         </p>
+</div>
+</div>
+</article>
+<article class="bp spot" data-cat="Access Control">
+<div class="bi" style="--a:#4A1768;--b:#FBBF24;--h:230px"><img alt="Open padlock among keyboard keys" class="web pf" decoding="async" loading="lazy" onerror="this.remove()" onload="this.classList.add('in');this.parentNode.classList.add('has-photo')" src="https://images.unsplash.com/photo-1618060932014-4deda4932554?fm=webp&amp;fit=crop&amp;w=800&amp;q=70"/>
+<svg aria-hidden="true" class="gl" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 60 60">
+<circle cx="20" cy="30" r="12">
+</circle>
+<path d="M32 30h22M46 30v10M54 30v8">
+</path>
+</svg>
+</div>
+<div class="pc">
+<span class="tag">
+         Access Control
+        </span>
+<time>
+         Aug 21, 2026
+        </time>
+<h3>
+         RBAC or ABAC? Choose without regret
+        </h3>
+<p>
+         When roles are enough and when attributes help.
+        </p>
+<div class="by">
+<span class="av2">
+          DO
+         </span>
+<span>
+          Daniel Okafor
+          <small>
+           8 min read
+          </small>
+</span>
+</div>
+<button aria-expanded="false" class="btn p sm2" data-read="">
+         Read more
+        </button>
+<div class="more">
+<p>
+          Start with roles for the 90% case and add attributes only for exceptions like location or device health.
+         </p>
+</div>
+</div>
+</article>
+<article class="bp spot" data-cat="Passwordless">
+<div class="bi" style="--a:#E11D8F;--b:#10B981;--h:180px"><img alt="Person working on a laptop" class="web pf" decoding="async" loading="lazy" onerror="this.remove()" onload="this.classList.add('in');this.parentNode.classList.add('has-photo')" src="https://images.unsplash.com/photo-1590065707046-4fde65275b2e?fm=webp&amp;fit=crop&amp;w=800&amp;q=70"/>
+<svg aria-hidden="true" class="gl" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 60 60">
+<circle cx="14" cy="30" r="3">
+</circle>
+<circle cx="30" cy="30" r="3">
+</circle>
+<circle cx="46" cy="30" r="3">
+</circle>
+<path d="M8 52 52 8">
+</path>
+</svg>
+</div>
+<div class="pc">
+<span class="tag">
+         Passwordless
+        </span>
+<time>
+         Aug 9, 2026
+        </time>
+<h3>
+         A practical path to passwordless
+        </h3>
+<p>
+         Roll out passkeys without a big-bang migration.
+        </p>
+<div class="by">
+<span class="av2">
+          ML
+         </span>
+<span>
+          Mei Lin
+          <small>
+           6 min read
+          </small>
+</span>
+</div>
+<button aria-expanded="false" class="btn p sm2" data-read="">
+         Read more
+        </button>
+<div class="more">
+<p>
+          Enroll privileged users first, offer passkeys as the default at sign-in, then retire passwords team by team.
+         </p>
+</div>
+</div>
+</article>
+<article class="bp spot" data-cat="IAM Best Practices">
+<div class="bi" style="--a:#10B981;--b:#E11D8F;--h:210px"><img alt="People working in front of a computer monitor" class="web pf" decoding="async" loading="lazy" onerror="this.remove()" onload="this.classList.add('in');this.parentNode.classList.add('has-photo')" src="https://images.unsplash.com/photo-1629904853716-f0bc54eea481?fm=webp&amp;fit=crop&amp;w=800&amp;q=70"/>
+<svg aria-hidden="true" class="gl" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 60 60">
+<path d="M12 14l6 6 10-12M12 32l6 6 10-12M36 18h16M36 36h16M12 50h40">
+</path>
+</svg>
+</div>
+<div class="pc">
+<span class="tag">
+         IAM Best Practices
+        </span>
+<time>
+         Jul 28, 2026
+        </time>
+<h3>
+         IAM best practices for growing teams
+        </h3>
+<p>
+         A checklist you can finish this quarter.
+        </p>
+<div class="by">
+<span class="av2">
+          CM
+         </span>
+<span>
+          Carlos Mendes
+          <small>
+           9 min read
+          </small>
+</span>
+</div>
+<button aria-expanded="false" class="btn p sm2" data-read="">
+         Read more
+        </button>
+<div class="more">
+<p>
+          Centralize identity, enforce MFA, automate offboarding and review access every quarter.
+         </p>
+</div>
+</div>
+</article>
+<article class="bp spot" data-cat="MFA">
+<div class="bi" style="--a:#FB7185;--b:#E11D8F;--h:240px"><img alt="Laptop open in a dark room" class="web pf" decoding="async" loading="lazy" onerror="this.remove()" onload="this.classList.add('in');this.parentNode.classList.add('has-photo')" src="https://images.unsplash.com/photo-1483817101829-339b08e8d83f?fm=webp&amp;fit=crop&amp;w=800&amp;q=70"/>
+<svg aria-hidden="true" class="gl" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 60 60">
+<rect height="48" rx="6" width="24" x="18" y="6">
+</rect>
+<circle cx="30" cy="44" r="2">
+</circle>
+<path d="M24 16h12">
+</path>
+</svg>
+</div>
+<div class="pc">
+<span class="tag">
+         MFA
+        </span>
+<time>
+         Jul 14, 2026
+        </time>
+<h3>
+         Stopping MFA fatigue attacks
+        </h3>
+<p>
+         Why constant prompts become the weakness.
+        </p>
+<div class="by">
+<span class="av2">
+          AR
+         </span>
+<span>
+          Anika Rao
+          <small>
+           5 min read
+          </small>
+</span>
+</div>
+<button aria-expanded="false" class="btn p sm2" data-read="">
+         Read more
+        </button>
+<div class="more">
+<p>
+          Use number matching, limit prompts per hour and flag repeated denials as an attack signal.
+         </p>
+</div>
+</div>
+</article>
+<article class="bp spot" data-cat="Zero Trust">
+<div class="bi" style="--a:#4A1768;--b:#10B981;--h:200px"><img alt="Secure access dashboard on a laptop" class="web pf" decoding="async" loading="lazy" onerror="this.remove()" onload="this.classList.add('in');this.parentNode.classList.add('has-photo')" src="https://images.unsplash.com/photo-1548092372-0d1bd40894a3?fm=webp&amp;fit=crop&amp;w=800&amp;q=70"/>
+<svg aria-hidden="true" class="gl" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 60 60">
+<path d="M30 6 52 14v16c0 14-9 22-22 26C17 52 8 44 8 30V14z">
+</path>
+<path d="M20 30l7 7 14-15">
+</path>
+</svg>
+</div>
+<div class="pc">
+<span class="tag">
+         Zero Trust
+        </span>
+<time>
+         Jul 2, 2026
+        </time>
+<h3>
+         Building a Zero Trust rollout in 90 days
+        </h3>
+<p>
+         A practical sequence for identity, devices and least privilege.
+        </p>
+<div class="by">
+<span class="av2">
+          AR
+         </span>
+<span>
+          Anika Rao
+          <small>
+           6 min read
+          </small>
+</span>
+</div>
+<button aria-expanded="false" class="btn p sm2" data-read="">
+         Read more
+        </button>
+<div class="more">
+<p>
+          Start with a clear inventory, protect privileged accounts, then validate device health and expand policy one application at a time.
+         </p>
+</div>
+</div>
+</article>
+ 
+</div>
+</div>
+</section>
+<section class="dark nlband">
+<div class="wrap">
+<h2>
+      Get the next one in your inbox
+     </h2>
+<p class="lead" style="margin:auto">
+      One short email a month. No spam, unsubscribe any time.
+     </p>
+<form class="nl" data-form="newsletter" novalidate="">
+<div class="fld">
+<label for="email">
+        Email address
+       </label>
+<input aria-describedby="e-email" autocomplete="email" data-v="email" id="email" name="email" type="email"/>
+<div class="err" id="e-email" role="alert">
+</div>
+</div>
+<button class="btn p" type="submit">
+       Subscribe
+      </button>
+<p class="ok-msg inline" role="status">
+       You are in! Watch your inbox for the next article.
+      </p>
+</form>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+<div>
+<a class="flogo" href="index.html">
+<img alt="Stackly logo" src="assets/logo/logo.webp"/>
+</a>
+<p style="margin-top:14px;max-width:34ch">
+      Identity and access management that verifies every person, device and request before it reaches your data.
+     </p>
+<div class="soc">
+<a aria-label="LinkedIn" data-t="LinkedIn" href="404.html">
+<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.5 8.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM5 10h3v9H5zm5 0h2.9v1.2c.6-.9 1.5-1.5 2.8-1.5 2.6 0 3.3 1.7 3.3 4V19h-3v-4.7c0-1.2 0-2.2-1.4-2.2s-1.6 1-1.6 2.1V19h-3z"/></svg>
+      </a>
+<a aria-label="X" data-t="X" href="404.html">
+<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.6 22H2.4l7.3-8.4L1.8 2h6.5l4.5 6.8zM17.8 20h1.7L7.2 3.9H5.4z"/></svg>
+      </a>
+<a aria-label="GitHub" data-t="GitHub" href="404.html">
+<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 .9a11.1 11.1 0 0 0-3.5 21.6c.6.1.8-.3.8-.6v-2.1c-3.1.7-3.8-1.3-3.8-1.3-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 1.6-.8 1.9-1.2.1-.7.4-1.1.7-1.4-2.5-.3-5.1-1.3-5.1-5.6 0-1.2.4-2.2 1.1-2.9-.1-.3-.5-1.4.1-2.9 0 0 .9-.3 3 1.1a10.5 10.5 0 0 1 5.5 0c2.1-1.4 3-1.1 3-1.1.6 1.5.2 2.6.1 2.9.7.8 1.1 1.7 1.1 2.9 0 4.3-2.6 5.3-5.1 5.6.4.3.8 1 .8 2v3c0 .3.2.7.8.6A11.1 11.1 0 0 0 12 .9Z"/></svg>
+      </a>
+<a aria-label="YouTube" data-t="YouTube" href="404.html">
+<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6z"/></svg>
+      </a>
+</div>
+</div>
+<div>
+<h3>
+      Navigate
+     </h3>
+<ul>
+<li>
+<a href="index.html">
+        Home
+       </a>
+</li>
+<li>
+<a href="about.html">
+        About
+       </a>
+</li>
+<li>
+<a href="services.html">
+        Services
+       </a>
+</li>
+<li>
+<a href="blog.html">
+        Blog
+       </a>
+</li>
+<li>
+<a href="contact.html">
+        Contact
+       </a>
+</li>
+</ul>
+</div>
+<div>
+<h3>
+      Account
+     </h3>
+<ul>
+<li>
+<a href="login.html">
+        Login
+       </a>
+</li>
+<li>
+<a href="create-account.html">
+        Create Account
+       </a>
+</li>
+<li><a href="404.html">My Profile</a></li>
+<li><a href="404.html">Security Settings</a></li>
+<li><a href="404.html">Help Center</a></li>
+</ul>
+</div>
+<div>
+<h3>
+      Contact
+     </h3>
+<ul>
+<li>
+<a href="mailto:hello@stackly.example">
+        hello@stackly.example
+       </a>
+</li>
+<li>
+<address class="footer-address">Khata No 10, Begur - Koppa Rd, in front of SNN Raj Serenity, Suraksha Nagar, Yelenahalli, Begur, Bengaluru, Karnataka - 560068</address>
+</li>
+<li>
+<a href="terms.html">
+        Terms &amp; Conditions
+       </a>
+</li>
+</ul>
+</div>
+<div class="copy">
+<span>© 2026 Stackly. All rights reserved.</span>
+<div class="copy-links"><a href="404.html">Privacy Policy</a><a href="404.html">Terms</a></div>
+</div>
+</div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js">
+</script>
+<script src="js/main.js">
+</script>
+<script src="js/auth.js">
+</script>
+<script src="js/pages.js">
+</script>
+</body>
+</html>

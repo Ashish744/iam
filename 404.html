@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Identity not found | Stackly
+  </title>
+  <meta content="Stackly identity and access management" name="description"/>
+  <link href="assets/logo/logo.webp" rel="icon"/>
+  <link href="css/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <main class="auth nf">
+   <div>
+    <svg aria-label="Broken shield with disconnected nodes" role="img" viewbox="0 0 300 260">
+     <path d="M150 20 230 50v70c0 50-34 80-80 96-46-16-80-46-80-96V50z" fill="none" stroke="#FBBF24" stroke-width="6">
+     </path>
+     <path d="M150 20v95l-30 40 30 25" fill="none" stroke="#E11D8F" stroke-width="6">
+     </path>
+     <text fill="#F4E6FA" font-family="Georgia" font-size="64" text-anchor="middle" x="150" y="120">
+      404
+     </text>
+     <g fill="#34D399">
+      <circle class="nd" cx="40" cy="200" r="8">
+      </circle>
+      <circle class="nd" cx="260" cy="210" r="8">
+      </circle>
+      <circle class="nd" cx="250" cy="30" r="8">
+      </circle>
+     </g>
+    </svg>
+    <h1 style="font-size:2.4rem">
+     Identity not found
+    </h1>
+    <p>
+     This page doesn't exist or you don't have access to it.
+    </p>
+    <div class="btns">
+     <a class="btn g" href="javascript:history.back()">
+      Back
+     </a>
+     <a class="btn p" href="index.html">
+      Home
+     </a>
+    </div>
+   </div>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js">
+  </script>
+  <script>
+   if (window.gsap) {
+    gsap.to(".nd", { y: -14, duration: 1.6, yoyo: true, repeat: -1, stagger: .3, ease: "sine.inOut" });
+    gsap.from("svg path", { opacity: 0, duration: 1, stagger: .3 });
+   }
+  </script>
+ </body>
+</html>

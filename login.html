@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Login | Stackly
+  </title>
+  <meta content="Stackly identity and access management" name="description"/>
+  <link href="assets/logo/logo.webp" rel="icon"/>
+  <link href="css/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <nav aria-label="Main">
+   <div class="wrap">
+    <a aria-label="Stackly home" class="logo" href="index.html">
+     <img alt="Stackly logo" src="assets/logo/logo.webp"/>
+    </a>
+    <button aria-expanded="false" aria-label="Toggle menu" aria-controls="nav-menu" class="burger">
+     Menu
+    </button>
+    <div class="nav-menu" id="nav-menu">
+        <ul class="nav-main">
+<li>
+      <a class="l" href="index.html">
+       Home
+      </a>
+     </li>
+<li>
+      <a class="l" href="about.html">
+       About
+      </a>
+     </li>
+<li>
+      <a class="l" href="services.html">
+       Services
+      </a>
+     </li>
+<li>
+      <a class="l" href="blog.html">
+       Blog
+      </a>
+     </li>
+<li>
+      <a class="l" href="contact.html">
+       Contact
+      </a>
+     </li>
+        </ul>
+        <ul class="nav-actions">
+<li>
+      <a class="l on" href="login.html">
+       Login
+      </a>
+     </li>
+<li>
+      <a class="btn p" href="create-account.html" style="padding:8px 20px">
+       Create Account
+      </a>
+     </li>
+        </ul>
+      </div>
+   </div>
+  </nav>
+  <main class="auth">
+   <div class="card">
+    <form data-form="login" novalidate="">
+     <h1>
+      Welcome back
+     </h1>
+     <p>
+      Sign in to your Stackly workspace.
+     </p>
+     <div aria-label="Choose account type" class="roles" role="group">
+      <button aria-pressed="false" class="role admin" data-role="admin" type="button">
+       <b>
+        Admin
+       </b>
+       <small>
+        Manage identities
+       </small>
+      </button>
+      <button aria-pressed="false" class="role public" data-role="public" type="button">
+       <b>
+        Public
+       </b>
+       <small>
+        Manage my account
+       </small>
+      </button>
+     </div>
+     <div class="err" id="roleErr" role="alert">
+     </div>
+     <div class="fld">
+      <label for="email">
+       Email
+      </label>
+      <input aria-describedby="e-email" autocomplete="email" data-v="email" id="email" name="email" type="email"/>
+      <div class="err" id="e-email" role="alert">
+      </div>
+     </div>
+     <div class="fld">
+      <label for="password">
+       Password
+      </label>
+      <div class="pw">
+       <input aria-describedby="e-password" autocomplete="current-password" data-v="password" id="password" name="password" type="password"/>
+       <button aria-label="Show password" type="button">
+        Show
+       </button>
+      </div>
+      <div class="err" id="e-password" role="alert">
+      </div>
+     </div>
+     <div class="row">
+      <label>
+       <input name="remember" type="checkbox"/>
+       Remember me
+      </label>
+      <a href="login.html" onclick="alert('Password reset link sent if the account exists.');return false">
+       Forgot password?
+      </a>
+     </div>
+     <button class="btn p" type="submit">
+      Login
+     </button>
+     <p class="row">
+      New here?
+      <a href="create-account.html">
+       Create an account
+      </a>
+     </p>
+    </form>
+   </div>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js">
+  </script>
+  <script src="js/main.js">
+  </script>
+  <script src="js/auth.js">
+  </script>
+ </body>
+</html>

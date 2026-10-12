@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   My Account | Stackly
+  </title>
+  <link href="assets/logo/logo.webp" rel="icon"/>
+  <link href="css/style.css" rel="stylesheet"/>
+  <link href="css/dashboard.css" rel="stylesheet"/>
+ </head>
+ <body class="d">
+  <header class="dn">
+   <a aria-label="Stackly home" class="logo" href="index.html">
+    <img alt="Stackly logo" src="assets/logo/logo.webp"/>
+   </a>
+   <div class="pm">
+    <button aria-expanded="false" aria-haspopup="true" class="pb">
+     <span class="av">
+      AM
+     </span>
+     <span class="nm">
+      Alex Morgan
+     </span>
+    </button>
+    <div class="pmenu" role="menu">
+     <a href="admin-dashboard.html" role="menuitem">
+      Switch to admin dashboard
+     </a>
+     <a href="index.html" role="menuitem">
+      Back to website
+     </a>
+     <a href="login.html" role="menuitem">
+      Sign out
+     </a>
+    </div>
+   </div>
+  </header>
+  <div class="dshell">
+   <aside aria-label="Account menu" class="side pub">
+    <div class="scard">
+     <div class="who">
+      <span class="av">
+       AM
+      </span>
+      <div>
+       <b>
+        Alex Morgan
+       </b>
+       <small>
+        Identity verified
+       </small>
+      </div>
+     </div>
+     <nav>
+      <a class="mi" data-panel="home" href="#home">
+       Home
+      </a>
+      <a class="mi" data-panel="identity" href="#identity">
+       My Identity
+      </a>
+      <a class="mi" data-panel="security" href="#security">
+       Security Status
+      </a>
+      <a class="mi" data-panel="sessions" href="#sessions">
+       Active Sessions
+      </a>
+      <a class="mi" data-panel="apps" href="#apps">
+       Connected Apps
+      </a>
+      <a class="mi" data-panel="activity" href="#activity">
+       Login Activity
+      </a>
+      <a class="mi" data-panel="recommendations" href="#recommendations">
+       Recommendations
+       <span class="bdg" data-badge="recs">
+        3
+       </span>
+      </a>
+      <a class="mi" data-panel="mfa" href="#mfa">
+       MFA Status
+      </a>
+      <a class="mi" data-panel="settings" href="#settings">
+       Account Settings
+      </a>
+     </nav>
+     <div class="mini">
+      <svg aria-label="Security score 82 out of 100" class="ring" role="img" viewbox="0 0 110 110">
+       <circle cx="55" cy="55" r="45" stroke="#2B0F3F22">
+       </circle>
+       <circle class="v" cx="55" cy="55" data-p="82" r="45" stroke="#10B981" stroke-dasharray="283" stroke-dashoffset="283" stroke-linecap="round" transform="rotate(-90 55 55)">
+       </circle>
+      </svg>
+      <div>
+       <b>
+        82
+       </b>
+       <small>
+        Security score
+       </small>
+      </div>
+     </div>
+    </div>
+   </aside>
+   <main class="dm">
+    <section aria-labelledby="h-home" class="dpanel" id="home">
+     <div class="pt">
+      <h1 id="h-home">
+       Welcome back
+      </h1>
+      <p>
+       Your account at a glance.
+      </p>
+     </div>
+     <div class="wb">
+      <div>
+       <h1>
+        <span id="hi">
+         Welcome
+        </span>
+        , Alex
+       </h1>
+       <p>
+        Your account is protected. Two items need your attention.
+       </p>
+      </div>
+      <svg aria-label="Security score 82 out of 100" class="ring" role="img" viewbox="0 0 110 110">
+       <circle cx="55" cy="55" r="45" stroke="#ffffff33">
+       </circle>
+       <circle class="v" cx="55" cy="55" data-p="82" r="45" stroke="#FBBF24" stroke-dasharray="283" stroke-dashoffset="283" stroke-linecap="round" transform="rotate(-90 55 55)">
+       </circle>
+       <text fill="#F4E6FA" font-family="Georgia" font-size="24" text-anchor="middle" x="55" y="62">
+        82
+       </text>
+      </svg>
+     </div>
+     <div class="g g3 tiles">
+      <a class="c tile" href="#identity">
+       <b>
+        My identity
+       </b>
+       <span>
+        Your profile and verification
+       </span>
+      </a>
+      <a class="c tile" href="#security">
+       <b>
+        Security status
+       </b>
+       <span>
+        How well protected you are
+       </span>
+      </a>
+      <a class="c tile" href="#sessions">
+       <b>
+        Active sessions
+       </b>
+       <span>
+        Where you are signed in
+       </span>
+      </a>
+      <a class="c tile" href="#apps">
+       <b>
+        Connected apps
+       </b>
+       <span>
+        Apps with access to you
+       </span>
+      </a>
+      <a class="c tile" href="#mfa">
+       <b>
+        MFA status
+       </b>
+       <span>
+        Your sign-in methods
+       </span>
+      </a>
+      <a class="c tile" href="#settings">
+       <b>
+        Account settings
+       </b>
+       <span>
+        Name, email, alerts
+       </span>
+      </a>
+     </div>
+    </section>
+    <section aria-labelledby="h-identity" class="dpanel" id="identity">
+     <div class="pt">
+      <h1 id="h-identity">
+       My identity
+      </h1>
+      <p>
+       The details Stackly holds about you.
+      </p>
+     </div>
+     <div class="g ge">
+      <div class="c">
+       <h2 class="dh" style="margin-top:0">
+        My identity
+       </h2>
+       <div style="display:flex;gap:12px;align-items:center">
+        <span class="av" style="width:56px;height:56px;font-size:1.2rem">
+         AM
+        </span>
+        <div>
+         <b>
+          Alex Morgan
+         </b>
+         <br/>
+         <small>
+          alex.morgan@example.com
+         </small>
+        </div>
+       </div>
+       <p style="margin-top:12px">
+        <span class="pill lo">
+         Identity verified
+        </span>
+       </p>
+       <small>
+        ID: STK-20931
+       </small>
+      </div>
+      <div class="c">
+       <h2 class="dh" style="margin-top:0">
+        Profile details
+       </h2>
+       <ul class="list">
+        <li>
+         <span>
+          Full name
+         </span>
+         <b>
+          Alex Morgan
+         </b>
+        </li>
+        <li>
+         <span>
+          Email
+         </span>
+         <b>
+          alex.morgan@example.com
+         </b>
+        </li>
+        <li>
+         <span>
+          Account ID
+         </span>
+         <b>
+          STK-20931
+         </b>
+        </li>
+        <li>
+         <span>
+          Member since
+         </span>
+         <b>
+          March 2025
+         </b>
+        </li>
+        <li>
+         <span>
+          Verification level
+         </span>
+         <b>
+          Verified
+         </b>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </section>
+    <section aria-labelledby="h-security" class="dpanel" id="security">
+     <div class="pt">
+      <h1 id="h-security">
+       Security status
+      </h1>
+      <p>
+       The strength of each part of your account.
+      </p>
+     </div>
+     <div class="g ge">
+      <div class="c">
+       <h2 class="dh" style="margin-top:0">
+        Security status
+       </h2>
+       <div class="m">
+        <small>
+         Password strength
+        </small>
+        <div>
+         <i data-w="90" style="background:var(--mint)">
+         </i>
+        </div>
+       </div>
+       <div class="m">
+        <small>
+         Recovery options
+        </small>
+        <div>
+         <i data-w="60" style="background:var(--amber)">
+         </i>
+        </div>
+       </div>
+       <div class="m">
+        <small>
+         Device trust
+        </small>
+        <div>
+         <i data-w="85" style="background:var(--mint)">
+         </i>
+        </div>
+       </div>
+      </div>
+      <div class="c">
+       <h2 class="dh" style="margin-top:0">
+        Checklist
+       </h2>
+       <ul class="list">
+        <li>
+         <span>
+          Strong password
+         </span>
+         <span class="pill lo">
+          Done
+         </span>
+        </li>
+        <li>
+         <span>
+          Passkey enrolled
+         </span>
+         <span class="pill lo">
+          Done
+         </span>
+        </li>
+        <li>
+         <span>
+          Recovery email confirmed
+         </span>
+         <span class="pill me">
+          Needs attention
+         </span>
+        </li>
+        <li>
+         <span>
+          Security key added
+         </span>
+         <span class="pill me">
+          Needs attention
+         </span>
+        </li>
+        <li>
+         <span>
+          Unused apps removed
+         </span>
+         <span class="pill lo">
+          Done
+         </span>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </section>
+    <section aria-labelledby="h-sessions" class="dpanel" id="sessions">
+     <div class="pt">
+      <h1 id="h-sessions">
+       Active sessions
+      </h1>
+      <p>
+       Devices currently signed in to your account.
+      </p>
+     </div>
+     <div class="c">
+      <h2 class="dh" style="margin-top:0">
+       Active sessions
+      </h2>
+      <ul class="list">
+       <li class="rm">
+        <span>
+         <b>
+          MacBook Pro, Chrome
+         </b>
+         <br/>
+         <small>
+          Active now
+         </small>
+        </span>
+        <span class="pill lo">
+         This device
+        </span>
+       </li>
+       <li class="rm">
+        <span>
+         <b>
+          iPhone 15, Safari
+         </b>
+         <br/>
+         <small>
+          2 hours ago
+         </small>
+        </span>
+        <button class="btn p s" data-act="remove">
+         Revoke
+        </button>
+       </li>
+       <li class="rm">
+        <span>
+         <b>
+          Windows PC, Edge
+         </b>
+         <br/>
+         <small>
+          Yesterday
+         </small>
+        </span>
+        <button class="btn p s" data-act="remove">
+         Revoke
+        </button>
+       </li>
+      </ul>
+     </div>
+    </section>
+    <section aria-labelledby="h-apps" class="dpanel" id="apps">
+     <div class="pt">
+      <h1 id="h-apps">
+       Connected applications
+      </h1>
+      <p>
+       Apps that can access your Stackly identity.
+      </p>
+     </div>
+     <div class="c">
+      <h2 class="dh" style="margin-top:0">
+       Connected applications
+      </h2>
+      <div class="apps">
+       <div class="rm">
+        <b>
+         Slack
+        </b>
+        <br/>
+        <button class="btn p s" data-act="remove">
+         Disconnect
+        </button>
+       </div>
+       <div class="rm">
+        <b>
+         GitHub
+        </b>
+        <br/>
+        <button class="btn p s" data-act="remove">
+         Disconnect
+        </button>
+       </div>
+       <div class="rm">
+        <b>
+         Notion
+        </b>
+        <br/>
+        <button class="btn p s" data-act="remove">
+         Disconnect
+        </button>
+       </div>
+       <div class="rm">
+        <b>
+         Zoom
+        </b>
+        <br/>
+        <button class="btn p s" data-act="remove">
+         Disconnect
+        </button>
+       </div>
+       <div class="rm">
+        <b>
+         Salesforce
+        </b>
+        <br/>
+        <button class="btn p s" data-act="remove">
+         Disconnect
+        </button>
+       </div>
+       <div class="rm">
+        <b>
+         Dropbox
+        </b>
+        <br/>
+        <button class="btn p s" data-act="remove">
+         Disconnect
+        </button>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section aria-labelledby="h-activity" class="dpanel" id="activity">
+     <div class="pt">
+      <h1 id="h-activity">
+       Recent login activity
+      </h1>
+      <p>
+       The latest sign-ins and what happened.
+      </p>
+     </div>
+     <div class="c">
+      <h2 class="dh" style="margin-top:0">
+       Recent login activity
+      </h2>
+      <ul class="list">
+       <li>
+        <span>
+         <b>
+          Signed in on MacBook Pro
+         </b>
+         <br/>
+         <small>
+          Today, 09:02
+         </small>
+        </span>
+        <span class="pill lo">
+         Verified
+        </span>
+       </li>
+       <li>
+        <span>
+         <b>
+          New device sign-in
+         </b>
+         <br/>
+         <small>
+          Yesterday, 21:14
+         </small>
+        </span>
+        <span class="pill me">
+         Challenged
+        </span>
+       </li>
+       <li>
+        <span>
+         <b>
+          Password check
+         </b>
+         <br/>
+         <small>
+          Mon, 08:40
+         </small>
+        </span>
+        <span class="pill lo">
+         Verified
+        </span>
+       </li>
+       <li>
+        <span>
+         <b>
+          Blocked unknown location
+         </b>
+         <br/>
+         <small>
+          Sun, 03:11
+         </small>
+        </span>
+        <span class="pill hi">
+         Blocked
+        </span>
+       </li>
+      </ul>
+     </div>
+    </section>
+    <section aria-labelledby="h-recommendations" class="dpanel" id="recommendations">
+     <div class="pt">
+      <h1 id="h-recommendations">
+       Security recommendations
+      </h1>
+      <p>
+       Small steps that make a big difference.
+      </p>
+     </div>
+     <div class="c">
+      <h2 class="dh" style="margin-top:0">
+       Recommendations
+      </h2>
+      <div class="rec">
+       <b>
+        Add a security key
+       </b>
+       <p>
+        Hardware keys stop phishing attacks.
+       </p>
+       <button class="btn p s" data-act="done">
+        Mark done
+       </button>
+      </div>
+      <div class="rec">
+       <b>
+        Review connected apps
+       </b>
+       <p>
+        Remove apps you no longer use.
+       </p>
+       <button class="btn p s" data-act="done">
+        Mark done
+       </button>
+      </div>
+      <div class="rec">
+       <b>
+        Update recovery email
+       </b>
+       <p>
+        Make sure you can always get back in.
+       </p>
+       <button class="btn p s" data-act="done">
+        Mark done
+       </button>
+      </div>
+     </div>
+    </section>
+    <section aria-labelledby="h-mfa" class="dpanel" id="mfa">
+     <div class="pt">
+      <h1 id="h-mfa">
+       MFA status
+      </h1>
+      <p>
+       The ways you prove it is you.
+      </p>
+     </div>
+     <div class="g ge">
+      <div class="c">
+       <h2 class="dh" style="margin-top:0">
+        MFA status
+       </h2>
+       <ul class="list">
+        <li>
+         <span>
+          <b>
+           Passkey
+          </b>
+          <br/>
+          <small>
+           Fastest and most secure
+          </small>
+         </span>
+         <button aria-label="Toggle Passkey" aria-pressed="true" class="sw">
+         </button>
+        </li>
+        <li>
+         <span>
+          <b>
+           Authenticator app
+          </b>
+          <br/>
+          <small>
+           One-time codes
+          </small>
+         </span>
+         <button aria-label="Toggle Authenticator app" aria-pressed="true" class="sw">
+         </button>
+        </li>
+        <li>
+         <span>
+          <b>
+           SMS code
+          </b>
+          <br/>
+          <small>
+           Least secure, backup only
+          </small>
+         </span>
+         <button aria-label="Toggle SMS code" aria-pressed="false" class="sw">
+         </button>
+        </li>
+       </ul>
+      </div>
+      <div class="c">
+       <h2 class="dh" style="margin-top:0">
+        Recovery options
+       </h2>
+       <ul class="list">
+        <li>
+         <span>
+          Backup codes
+         </span>
+         <b>
+          8 remaining
+         </b>
+        </li>
+        <li>
+         <span>
+          Recovery email
+         </span>
+         <b>
+          alex.morgan@example.com
+         </b>
+        </li>
+        <li>
+         <span>
+          Trusted devices
+         </span>
+         <b>
+          2 devices
+         </b>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </section>
+    <section aria-labelledby="h-settings" class="dpanel" id="settings">
+     <div class="pt">
+      <h1 id="h-settings">
+       Account settings
+      </h1>
+      <p>
+       Update your details and choose your alerts.
+      </p>
+     </div>
+     <div class="g ge">
+      <div class="c dk">
+       <h2 class="dh" style="margin-top:0">
+        Account settings
+       </h2>
+       <form data-form="settings" novalidate="">
+        <div class="fld">
+         <label for="first">
+          Display name
+         </label>
+         <input aria-describedby="e-first" autocomplete="given-name" data-v="name" id="first" name="first" type="text"/>
+         <div class="err" id="e-first" role="alert">
+         </div>
+        </div>
+        <div class="fld">
+         <label for="email">
+          Email
+         </label>
+         <input aria-describedby="e-email" autocomplete="email" data-v="email" id="email" name="email" type="email"/>
+         <div class="err" id="e-email" role="alert">
+         </div>
+        </div>
+        <br/>
+        <button class="btn p" type="submit">
+         Save changes
+        </button>
+        <p class="ok-msg inline" role="status">
+         Changes saved.
+        </p>
+       </form>
+      </div>
+      <div class="c">
+       <h2 class="dh" style="margin-top:0">
+        Notifications
+       </h2>
+       <ul class="list">
+        <li>
+         <span>
+          Email me about new sign-ins
+         </span>
+         <button aria-label="Toggle Email me about new sign-ins" aria-pressed="true" class="sw">
+         </button>
+        </li>
+        <li>
+         <span>
+          Alert me about risky activity
+         </span>
+         <button aria-label="Toggle Alert me about risky activity" aria-pressed="true" class="sw">
+         </button>
+        </li>
+        <li>
+         <span>
+          Monthly security summary
+         </span>
+         <button aria-label="Toggle Monthly security summary" aria-pressed="false" class="sw">
+         </button>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </section>
+   </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js">
+  </script>
+  <script src="js/auth.js">
+  </script>
+  <script src="js/dashboard.js">
+  </script>
+ </body>
+</html>

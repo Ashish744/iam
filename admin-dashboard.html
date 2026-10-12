@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Admin Dashboard | Stackly
+  </title>
+  <link href="assets/logo/logo.webp" rel="icon"/>
+  <link href="css/style.css" rel="stylesheet"/>
+  <link href="css/dashboard.css" rel="stylesheet"/>
+ </head>
+ <body class="d">
+  <header class="dn">
+   <a aria-label="Stackly home" class="logo" href="index.html">
+    <img alt="Stackly logo" src="assets/logo/logo.webp"/>
+   </a>
+   <div class="pm">
+    <button aria-expanded="false" aria-haspopup="true" class="pb">
+     <span class="av">
+      MR
+     </span>
+     <span class="nm">
+      Maya Rivera
+     </span>
+    </button>
+    <div class="pmenu" role="menu">
+     <a href="public-dashboard.html" role="menuitem">
+      Switch to public dashboard
+     </a>
+     <a href="index.html" role="menuitem">
+      Back to website
+     </a>
+     <a href="login.html" role="menuitem">
+      Sign out
+     </a>
+    </div>
+   </div>
+  </header>
+  <div class="dshell">
+   <aside aria-label="Admin menu" class="side">
+    <nav>
+     <p class="mg">
+      Manage
+     </p>
+     <a class="mi" data-panel="overview" href="#overview">
+      Overview
+     </a>
+     <a class="mi" data-panel="identities" href="#identities">
+      Identity Management
+     </a>
+     <a class="mi" data-panel="requests" href="#requests">
+      Access Requests
+      <span class="bdg" data-badge="pend">
+       3
+      </span>
+     </a>
+     <p class="mg">
+      Monitor
+     </p>
+     <a class="mi" data-panel="activity" href="#activity">
+      Security Activity
+     </a>
+     <a class="mi" data-panel="analytics" href="#analytics">
+      Authentication Analytics
+     </a>
+     <a class="mi" data-panel="risk" href="#risk">
+      Risk Monitoring
+     </a>
+     <p class="mg">
+      Govern
+     </p>
+     <a class="mi" data-panel="access" href="#access">
+      Access Control
+     </a>
+     <a class="mi" data-panel="audit" href="#audit">
+      Audit Logs
+     </a>
+    </nav>
+   </aside>
+   <main class="dm">
+    <section aria-labelledby="h-overview" class="dpanel" id="overview">
+     <div class="pt">
+      <h1 id="h-overview">
+       Admin overview
+      </h1>
+      <p>
+       Identity health across your organization.
+      </p>
+     </div>
+     <div class="g g5" style="margin-top:20px">
+      <div class="c kv">
+       <small>
+        Total identities
+       </small>
+       <b data-n="48392">
+        0
+       </b>
+      </div>
+      <div class="c kv">
+       <small>
+        Active users
+       </small>
+       <b data-n="31208">
+        0
+       </b>
+      </div>
+      <div class="c kv">
+       <small>
+        Suspicious logins
+       </small>
+       <b data-n="214">
+        0
+       </b>
+      </div>
+      <div class="c kv">
+       <small>
+        Access requests
+       </small>
+       <b data-n="87">
+        0
+       </b>
+      </div>
+      <div class="c kv">
+       <small>
+        Risk score
+       </small>
+       <b data-n="18">
+        0
+       </b>
+      </div>
+     </div>
+     <div class="g ge" style="margin-top:16px">
+      <div class="c">
+       <h2 class="dh" style="margin-top:0">
+        Latest security events
+       </h2>
+       <ul class="list">
+        <li>
+         <span>
+          <b>
+           Sign-in blocked: unknown device
+          </b>
+          <br/>
+          <small>
+           2 min ago
+          </small>
+         </span>
+         <span class="pill hi">
+          Blocked
+         </span>
+        </li>
+        <li>
+         <span>
+          <b>
+           MFA challenge: sofia.patel
+          </b>
+          <br/>
+          <small>
+           14 min ago
+          </small>
+         </span>
+         <span class="pill me">
+          Challenged
+         </span>
+        </li>
+        <li>
+         <span>
+          <b>
+           Role changed: Developer to Manager
+          </b>
+          <br/>
+          <small>
+           1 hr ago
+          </small>
+         </span>
+         <span class="pill lo">
+          Logged
+         </span>
+        </li>
+        <li>
+         <span>
+          <b>
+           Policy updated: Finance-only
+          </b>
+          <br/>
+          <small>
+           3 hrs ago
+          </small>
+         </span>
+         <span class="pill lo">
+          Logged
+         </span>
+        </li>
+       </ul>
+       <a class="btn g s" href="#activity" style="color:var(--plum)">
+        View all activity
+       </a>
+      </div>
+      <div class="c">
+       <h2 class="dh" style="margin-top:0">
+        Needs your attention
+       </h2>
+       <ul class="list">
+        <li>
+         <span>
+          <b>
+           3
+          </b>
+          access requests are waiting
+         </span>
+         <a class="btn p s" href="#requests">
+          Review
+         </a>
+        </li>
+        <li>
+         <span>
+          <b>
+           2
+          </b>
+          identities need a risk review
+         </span>
+         <a class="btn p s" href="#identities">
+          Open
+         </a>
+        </li>
+        <li>
+         <span>
+          <b>
+           1
+          </b>
+          high-risk identity detected
+         </span>
+         <a class="btn p s" href="#risk">
+          Investigate
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </section>
+    <section aria-labelledby="h-identities" class="dpanel" id="identities">
+     <div class="pt">
+      <h1 id="h-identities">
+       Identity management
+      </h1>
+      <p>
+       Every user, role and status in one place.
+      </p>
+     </div>
+     <div class="fl">
+      <input aria-label="Search users" id="uq" placeholder="Search users" type="search"/>
+     </div>
+     <div class="c tw" id="utable">
+      <table>
+       <thead>
+        <tr>
+         <th>
+          User
+         </th>
+         <th>
+          Email
+         </th>
+         <th>
+          Role
+         </th>
+         <th>
+          Status
+         </th>
+         <th>
+          Last login
+         </th>
+         <th>
+          Risk
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          <b>
+           Maya Rivera
+          </b>
+         </td>
+         <td>
+          maya.rivera@acme.example
+         </td>
+         <td>
+          Admin
+         </td>
+         <td>
+          <span class="pill lo">
+           Active
+          </span>
+         </td>
+         <td>
+          2 min ago
+         </td>
+         <td>
+          <span class="pill lo">
+           Low
+          </span>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           Liam Chen
+          </b>
+         </td>
+         <td>
+          liam.chen@acme.example
+         </td>
+         <td>
+          Developer
+         </td>
+         <td>
+          <span class="pill lo">
+           Active
+          </span>
+         </td>
+         <td>
+          1 hr ago
+         </td>
+         <td>
+          <span class="pill lo">
+           Low
+          </span>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           Sofia Patel
+          </b>
+         </td>
+         <td>
+          sofia.patel@acme.example
+         </td>
+         <td>
+          Manager
+         </td>
+         <td>
+          <span class="pill lo">
+           Active
+          </span>
+         </td>
+         <td>
+          Today, 08:12
+         </td>
+         <td>
+          <span class="pill me">
+           Medium
+          </span>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           Noah Kim
+          </b>
+         </td>
+         <td>
+          noah.kim@partner.example
+         </td>
+         <td>
+          Partner
+         </td>
+         <td>
+          <span class="pill hi">
+           Suspended
+          </span>
+         </td>
+         <td>
+          3 days ago
+         </td>
+         <td>
+          <span class="pill hi">
+           High
+          </span>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           Ava Brown
+          </b>
+         </td>
+         <td>
+          ava.brown@acme.example
+         </td>
+         <td>
+          Employee
+         </td>
+         <td>
+          <span class="pill lo">
+           Active
+          </span>
+         </td>
+         <td>
+          Yesterday
+         </td>
+         <td>
+          <span class="pill lo">
+           Low
+          </span>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           Omar Haddad
+          </b>
+         </td>
+         <td>
+          omar.haddad@acme.example
+         </td>
+         <td>
+          Privileged
+         </td>
+         <td>
+          <span class="pill me">
+           Review
+          </span>
+         </td>
+         <td>
+          5 hrs ago
+         </td>
+         <td>
+          <span class="pill me">
+           Medium
+          </span>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </section>
+    <section aria-labelledby="h-requests" class="dpanel" id="requests">
+     <div class="pt">
+      <h1 id="h-requests">
+       Access requests
+      </h1>
+      <p>
+       Approve or reject what people are asking for.
+      </p>
+     </div>
+     <div class="rq">
+      <div class="c">
+       <h3>
+        Pending (
+        <span data-c="pend">
+         3
+        </span>
+        )
+       </h3>
+       <ul id="pend">
+        <li>
+         <span>
+          <b>
+           Sofia Patel
+          </b>
+          <br>
+           <small>
+            Finance Reports
+           </small>
+          </br>
+         </span>
+         <span class="acts">
+          <button class="sm y" data-act="approve">
+           Approve
+          </button>
+          <button class="sm n" data-act="reject">
+           Reject
+          </button>
+         </span>
+        </li>
+        <li>
+         <span>
+          <b>
+           Liam Chen
+          </b>
+          <br>
+           <small>
+            Production DB
+           </small>
+          </br>
+         </span>
+         <span class="acts">
+          <button class="sm y" data-act="approve">
+           Approve
+          </button>
+          <button class="sm n" data-act="reject">
+           Reject
+          </button>
+         </span>
+        </li>
+        <li>
+         <span>
+          <b>
+           Ava Brown
+          </b>
+          <br>
+           <small>
+            HR Portal
+           </small>
+          </br>
+         </span>
+         <span class="acts">
+          <button class="sm y" data-act="approve">
+           Approve
+          </button>
+          <button class="sm n" data-act="reject">
+           Reject
+          </button>
+         </span>
+        </li>
+       </ul>
+      </div>
+      <div class="c">
+       <h3>
+        Approved (
+        <span data-c="appr">
+         2
+        </span>
+        )
+       </h3>
+       <ul id="appr">
+        <li>
+         <span>
+          <b>
+           Maya Rivera
+          </b>
+          <br>
+           <small>
+            Admin Console
+           </small>
+          </br>
+         </span>
+        </li>
+        <li>
+         <span>
+          <b>
+           Omar Haddad
+          </b>
+          <br/>
+          <small>
+           Vault
+          </small>
+         </span>
+        </li>
+       </ul>
+      </div>
+      <div class="c">
+       <h3>
+        Rejected (
+        <span data-c="rej">
+         1
+        </span>
+        )
+       </h3>
+       <ul id="rej">
+        <li>
+         <span>
+          <b>
+           Noah Kim
+          </b>
+          <br/>
+          <small>
+           Billing Export
+          </small>
+         </span>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </section>
+    <section aria-labelledby="h-activity" class="dpanel" id="activity">
+     <div class="pt">
+      <h1 id="h-activity">
+       Security activity
+      </h1>
+      <p>
+       A live stream of authentication and policy events.
+      </p>
+     </div>
+     <div class="g g3" style="margin-bottom:16px">
+      <div class="c kv">
+       <small>
+        Events today
+       </small>
+       <b data-n="1284">
+        0
+       </b>
+      </div>
+      <div class="c kv">
+       <small>
+        Blocked
+       </small>
+       <b data-n="37">
+        0
+       </b>
+      </div>
+      <div class="c kv">
+       <small>
+        Challenged
+       </small>
+       <b data-n="112">
+        0
+       </b>
+      </div>
+     </div>
+     <div class="c">
+      <ul class="feedl" id="feed">
+       <li>
+        Waiting for events…
+       </li>
+      </ul>
+     </div>
+    </section>
+    <section aria-labelledby="h-analytics" class="dpanel" id="analytics">
+     <div class="pt">
+      <h1 id="h-analytics">
+       Authentication analytics
+      </h1>
+      <p>
+       How people sign in, and how well it is working.
+      </p>
+     </div>
+     <div class="g g3" style="margin-bottom:16px">
+      <div class="c kv">
+       <small>
+        Sign-in success rate
+       </small>
+       <b>
+        96.4%
+       </b>
+      </div>
+      <div class="c kv">
+       <small>
+        Passkey adoption
+       </small>
+       <b>
+        38%
+       </b>
+      </div>
+      <div class="c kv">
+       <small>
+        Average sign-in time
+       </small>
+       <b>
+        2.1 s
+       </b>
+      </div>
+     </div>
+     <div class="c dk">
+      <p>
+       Successful (green) and failed (red) sign-ins, last 14 days
+      </p>
+      <div id="line">
+      </div>
+      <div aria-label="Daily sign-in volume" class="bars" role="img">
+       <i>
+       </i>
+       <i>
+       </i>
+       <i>
+       </i>
+       <i>
+       </i>
+       <i>
+       </i>
+       <i>
+       </i>
+       <i>
+       </i>
+       <i>
+       </i>
+       <i>
+       </i>
+       <i>
+       </i>
+       <i>
+       </i>
+       <i>
+       </i>
+       <i>
+       </i>
+       <i>
+       </i>
+      </div>
+     </div>
+    </section>
+    <section aria-labelledby="h-risk" class="dpanel" id="risk">
+     <div class="pt">
+      <h1 id="h-risk">
+       Risk monitoring
+      </h1>
+      <p>
+       Where identity risk sits across the organization.
+      </p>
+     </div>
+     <div class="g g3">
+      <div class="c">
+       <h3>
+        Low risk
+       </h3>
+       <div class="m">
+        <div>
+         <i data-w="72" style="background:var(--mint)">
+         </i>
+        </div>
+       </div>
+       <small>
+        72% of identities
+       </small>
+      </div>
+      <div class="c">
+       <h3>
+        Medium risk
+       </h3>
+       <div class="m">
+        <div>
+         <i data-w="21" style="background:var(--amber)">
+         </i>
+        </div>
+       </div>
+       <small>
+        21% of identities
+       </small>
+      </div>
+      <div class="c">
+       <h3>
+        High risk
+       </h3>
+       <div class="m">
+        <div>
+         <i data-w="7" style="background:var(--coral)">
+         </i>
+        </div>
+       </div>
+       <small>
+        7% of identities
+       </small>
+      </div>
+     </div>
+     <div class="c" style="margin-top:16px">
+      <h2 class="dh" style="margin-top:0">
+       Top risky identities
+      </h2>
+      <ul class="list">
+       <li>
+        <span>
+         <b>
+          Noah Kim
+         </b>
+         <br/>
+         <small>
+          Partner, 3 days since last login
+         </small>
+        </span>
+        <span class="pill hi">
+         High
+        </span>
+       </li>
+       <li>
+        <span>
+         <b>
+          Omar Haddad
+         </b>
+         <br/>
+         <small>
+          Privileged, new device
+         </small>
+        </span>
+        <span class="pill me">
+         Medium
+        </span>
+       </li>
+       <li>
+        <span>
+         <b>
+          Sofia Patel
+         </b>
+         <br/>
+         <small>
+          Manager, unusual hours
+         </small>
+        </span>
+        <span class="pill me">
+         Medium
+        </span>
+       </li>
+      </ul>
+     </div>
+    </section>
+    <section aria-labelledby="h-access" class="dpanel" id="access">
+     <div class="pt">
+      <h1 id="h-access">
+       Access control
+      </h1>
+      <p>
+       Roles, permissions and the policies that enforce them.
+      </p>
+     </div>
+     <div class="c tw">
+      <table>
+       <thead>
+        <tr>
+         <th>
+          Role
+         </th>
+         <th>
+          Permissions
+         </th>
+         <th>
+          Policy
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          <b>
+           Administrator
+          </b>
+         </td>
+         <td class="chips">
+          <span>
+           Manage users
+          </span>
+          <span>
+           Edit policies
+          </span>
+          <span>
+           View audit logs
+          </span>
+         </td>
+         <td>
+          MFA required, IP allow-list
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           Developer
+          </b>
+         </td>
+         <td class="chips">
+          <span>
+           Deploy
+          </span>
+          <span>
+           Read secrets
+          </span>
+         </td>
+         <td>
+          Short-lived credentials
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           Manager
+          </b>
+         </td>
+         <td class="chips">
+          <span>
+           Approve access
+          </span>
+          <span>
+           View reports
+          </span>
+         </td>
+         <td>
+          Quarterly review
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           Partner
+          </b>
+         </td>
+         <td class="chips">
+          <span>
+           Shared files
+          </span>
+         </td>
+         <td>
+          Expires in 30 days
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           Employee
+          </b>
+         </td>
+         <td class="chips">
+          <span>
+           Company apps
+          </span>
+         </td>
+         <td>
+          SSO with passkey
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <h2 class="dh">
+      Policies
+     </h2>
+     <div class="g ge">
+      <div class="c pol">
+       <div>
+        <b>
+         Require MFA for admins
+        </b>
+        <br/>
+        <small>
+         Applies to every administrator account.
+        </small>
+       </div>
+       <button aria-label="Toggle Require MFA for admins" aria-pressed="true" class="sw">
+       </button>
+      </div>
+      <div class="c pol">
+       <div>
+        <b>
+         Block sign-ins from new countries
+        </b>
+        <br/>
+        <small>
+         Challenge or deny unfamiliar locations.
+        </small>
+       </div>
+       <button aria-label="Toggle Block sign-ins from new countries" aria-pressed="true" class="sw">
+       </button>
+      </div>
+      <div class="c pol">
+       <div>
+        <b>
+         Expire guest access in 30 days
+        </b>
+        <br/>
+        <small>
+         Partner access ends automatically.
+        </small>
+       </div>
+       <button aria-label="Toggle Expire guest access in 30 days" aria-pressed="true" class="sw">
+       </button>
+      </div>
+      <div class="c pol">
+       <div>
+        <b>
+         Passwordless for employees
+        </b>
+        <br/>
+        <small>
+         Offer passkeys as the default.
+        </small>
+       </div>
+       <button aria-label="Toggle Passwordless for employees" aria-pressed="false" class="sw">
+       </button>
+      </div>
+     </div>
+    </section>
+    <section aria-labelledby="h-audit" class="dpanel" id="audit">
+     <div class="pt">
+      <h1 id="h-audit">
+       Audit logs
+      </h1>
+      <p>
+       A searchable record of every action.
+      </p>
+     </div>
+     <div class="c">
+      <div class="fl">
+       <input aria-label="Search audit logs" id="q" placeholder="Search logs" type="search">
+        <select aria-label="Filter by result" id="lv">
+         <option value="">
+          All results
+         </option>
+         <option value="lo">
+          Allowed
+         </option>
+         <option value="me">
+          Challenged
+         </option>
+         <option value="hi">
+          Denied
+         </option>
+        </select>
+       </input>
+      </div>
+      <div class="tw">
+       <table id="audit">
+        <thead>
+         <tr>
+          <th>
+           Time
+          </th>
+          <th>
+           User
+          </th>
+          <th>
+           Action
+          </th>
+          <th>
+           Resource
+          </th>
+          <th>
+           IP
+          </th>
+          <th>
+           Result
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr data-lv="lo">
+          <td>
+           09:41
+          </td>
+          <td>
+           maya.rivera
+          </td>
+          <td>
+           Signed in
+          </td>
+          <td>
+           Admin Console
+          </td>
+          <td>
+           10.0.4.12
+          </td>
+          <td>
+           <span class="pill lo">
+            Allowed
+           </span>
+          </td>
+         </tr>
+         <tr data-lv="lo">
+          <td>
+           09:38
+          </td>
+          <td>
+           liam.chen
+          </td>
+          <td>
+           Read secret
+          </td>
+          <td>
+           Vault / prod-db
+          </td>
+          <td>
+           10.0.7.33
+          </td>
+          <td>
+           <span class="pill lo">
+            Allowed
+           </span>
+          </td>
+         </tr>
+         <tr data-lv="hi">
+          <td>
+           09:30
+          </td>
+          <td>
+           unknown
+          </td>
+          <td>
+           Signed in
+          </td>
+          <td>
+           Admin Console
+          </td>
+          <td>
+           185.22.9.4
+          </td>
+          <td>
+           <span class="pill hi">
+            Denied
+           </span>
+          </td>
+         </tr>
+         <tr data-lv="me">
+          <td>
+           09:12
+          </td>
+          <td>
+           sofia.patel
+          </td>
+          <td>
+           Changed policy
+          </td>
+          <td>
+           Finance-only
+          </td>
+          <td>
+           10.0.2.8
+          </td>
+          <td>
+           <span class="pill me">
+            Challenged
+           </span>
+          </td>
+         </tr>
+         <tr data-lv="hi">
+          <td>
+           08:57
+          </td>
+          <td>
+           noah.kim
+          </td>
+          <td>
+           Downloaded export
+          </td>
+          <td>
+           Billing
+          </td>
+          <td>
+           203.0.113.9
+          </td>
+          <td>
+           <span class="pill hi">
+            Denied
+           </span>
+          </td>
+         </tr>
+         <tr data-lv="lo">
+          <td>
+           08:40
+          </td>
+          <td>
+           ava.brown
+          </td>
+          <td>
+           Signed in
+          </td>
+          <td>
+           HR Portal
+          </td>
+          <td>
+           10.0.5.21
+          </td>
+          <td>
+           <span class="pill lo">
+            Allowed
+           </span>
+          </td>
+         </tr>
+         <tr data-lv="me">
+          <td>
+           08:22
+          </td>
+          <td>
+           omar.haddad
+          </td>
+          <td>
+           Elevated role
+          </td>
+          <td>
+           Vault
+          </td>
+          <td>
+           10.0.1.4
+          </td>
+          <td>
+           <span class="pill me">
+            Challenged
+           </span>
+          </td>
+         </tr>
+         <tr data-lv="lo">
+          <td>
+           08:05
+          </td>
+          <td>
+           maya.rivera
+          </td>
+          <td>
+           Created user
+          </td>
+          <td>
+           Directory
+          </td>
+          <td>
+           10.0.4.12
+          </td>
+          <td>
+           <span class="pill lo">
+            Allowed
+           </span>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </div>
+    </section>
+   </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js">
+  </script>
+  <script src="js/auth.js">
+  </script>
+  <script src="js/dashboard.js">
+  </script>
+ </body>
+</html>

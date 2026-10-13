@@ -381,12 +381,20 @@
       const stage = $('.clash-stage', sec), glow = $('.clash-glow', sec), impact = $('.impact', sec);
       const threats = $$('.cc.threat', sec), shields = $$('.cc.shield', sec);
       const title = $('.clash-title', sec), original = title.textContent;
+      const statValues = $$('.clash-stats b', sec).map(b => [b, b.textContent]);
       sec.classList.add('live');
 
       /* split the title into letters */
       title.setAttribute('aria-label', original.trim());
       title.innerHTML = [...original.trim()].map(c => `<i class="cx" aria-hidden="true">${c}</i>`).join('');
       const letters = $$('.cx', title);
+      gsap.set(letters, {
+        opacity: 0,
+        rotation: () => gsap.utils.random(-50, 50),
+        scale: 3
+      });
+      const subtitle = $('.clash-sub', sec);
+      gsap.set(subtitle, { opacity: 0, y: 30, filter: 'blur(10px)' });
 
       /* one effects group per collision, plus a bigger one for the title slam */
       const groups = [...threats, null].map(() => {
@@ -402,7 +410,7 @@
       shields.forEach((s, i) => gsap.set(s, { x: 1400, y: (i - 1.5) * 70, rotation: 30 }));
 
       const tl = gsap.timeline({ defaults: { ease: 'none' },
-        scrollTrigger: { trigger: sec, start: 'top top', end: '+=3800', pin: true, scrub: .8, anticipatePin: 1, invalidateOnRefresh: true } });
+        scrollTrigger: { trigger: sec, start: 'top top', end: '+=2600', pin: true, scrub: .8, anticipatePin: 1, invalidateOnRefresh: true } });
 
       const shake = at => tl.to(stage, { x: 14, y: -9, duration: .05 }, at).to(stage, { x: -12, y: 8, duration: .05 }, at + .05)
         .to(stage, { x: 7, y: -4, duration: .05 }, at + .1).to(stage, { x: 0, y: 0, duration: .08 }, at + .15);
@@ -425,7 +433,7 @@
         shake(at);
       };
 
-      tl.to([$('.clash-kicker', sec), $('.clash-hint', sec)], { opacity: 0, y: -20, duration: .5 }, .45);   /* intro text leaves before the first impact */
+      tl.to($('.clash-kicker', sec), { opacity: 0, y: -20, duration: .5 }, .45);
 
       threats.forEach((t, i) => {
         const s = shields[i], a = i * 1.7, hit = a + 1.4;
@@ -441,20 +449,43 @@
 
       /* BLOCKED. slams in */
       const slam = threats.length * 1.7 + .5;
-      tl.from(letters, { yPercent: -300, rotation: () => gsap.utils.random(-50, 50), scale: 3, opacity: 0, duration: .8, ease: 'back.out(1.8)', stagger: .07 }, slam);
+      tl.fromTo($('.clash-hint', sec), {
+        opacity: 1,
+        y: 0
+      }, {
+        opacity: 0,
+        y: 20,
+        duration: .35,
+        immediateRender: false
+      }, slam - .1);
+      tl.to(letters, {
+        opacity: 1,
+        rotation: 0,
+        scale: 1,
+        duration: .8,
+        ease: 'back.out(1.8)',
+        stagger: .07
+      }, slam);
       burst(groups[threats.length], slam + .75, 1.5);
-      tl.from($('.clash-sub', sec), { opacity: 0, y: 30, filter: 'blur(10px)', duration: .6 }, slam + 1.2);
+      tl.to(subtitle, {
+        opacity: 1,
+        y: 0,
+        filter: 'blur(0px)',
+        duration: .6
+      }, slam + 1.2);
 
-      /* stats pop in and count up */
+      /* Keep the metrics readable throughout the scroll-driven scene. */
       $$('.clash-stats > div', sec).forEach((box, i) => {
-        const b = $('b', box), end = +b.dataset.count, dec = +b.dataset.dec || 0, o = { v: 0 };
-        const put = v => b.textContent = (b.dataset.prefix || '') + v.toFixed(dec) + (b.dataset.suffix || '');
-        tl.from(box, { y: 50, opacity: 0, duration: .5 }, slam + 1.5 + i * .15)
-          .fromTo(o, { v: 0 }, { v: end, duration: 1, onUpdate: () => put(o.v) }, slam + 1.5 + i * .15);
+        tl.from(box, { y: 16, duration: .5 }, slam + 1.5 + i * .15);
       });
       tl.to({}, { duration: .8 });   /* hold the finished scene for a moment */
 
-      return () => { sec.classList.remove('live'); title.textContent = original; impact.innerHTML = ''; };   /* undo when the screen gets small */
+      return () => {
+        sec.classList.remove('live');
+        title.textContent = original;
+        impact.innerHTML = '';
+        statValues.forEach(([b, value]) => b.textContent = value);
+      };   /* undo when the screen gets small */
     });
   }
 

@@ -1142,17 +1142,19 @@ footer .wrap {
 .flogo {
   display: inline-block;
   background: var(--orchid);
-  padding: 14px 22px;
-  border-radius: 18px
+  padding: 10px 16px;
+  border-radius: 14px
 }
 
 .flogo img {
-  height: 64px;
+  height: 48px;
   width: auto;
   display: block
 }
 
 footer ul {
+  display: grid;
+  gap: 10px;
   list-style: none;
   padding: 0
 }
@@ -1160,7 +1162,7 @@ footer ul {
 .footer-address {
   max-width: 30ch;
   font-style: normal;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 footer a {
@@ -3640,17 +3642,19 @@ img.web.in {
 }
 
 .clash.live .clash-kicker {
-  top: 36%;
+  top: 9%;
   padding: 0 6%;
   font-size: clamp(1.1rem, 2.2vw, 1.7rem);
 }
 
 .clash.live .clash-hint {
   position: absolute;
-  top: calc(36% + 3.4em);
+  top: auto;
+  bottom: 12%;
   left: 0;
   right: 0;
   display: block;
   color: #D9BDEB;
+  font-size: .95rem;
   animation: bob 1.6s ease-in-out infinite;
 }

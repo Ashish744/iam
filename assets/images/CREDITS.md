@@ -1,8 +1,9 @@
 # Photo credits
 
-Photos are loaded directly from Unsplash (https://unsplash.com) under the Unsplash License
-(free to use, attribution not required but appreciated). Needs an internet connection.
-If a photo cannot load, the built-in illustration underneath is shown instead.
+Photos are sourced from Unsplash (https://unsplash.com) under the Unsplash License
+(free to use; attribution is not required but appreciated). They are stored locally as
+WebP images optimized to stay below 100 KB each, so image delivery does not require an
+internet connection.
 
 | Photo ID | Photographer |
 |---|---|
@@ -23,4 +24,4 @@ If a photo cannot load, the built-in illustration underneath is shown instead.
 | 1762512346988-045f4d5ad2b3 | Jaykumar Bherwani |
 | 1663415526629-14b0ae51076e | Francais a Londres |
 
-Photo URL pattern: https://images.unsplash.com/photo-<ID>
+The original Unsplash photo IDs are retained in the local WebP filenames.

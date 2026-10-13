@@ -17,6 +17,31 @@ body.d {
   padding: 0 4%
 }
 
+.dburger {
+  display: none;
+  width: 42px;
+  height: 40px;
+  padding: 9px;
+  border: 1px solid #ffffff44;
+  border-radius: 10px;
+  background: #ffffff1f;
+  color: var(--orchid);
+  cursor: pointer;
+}
+
+.dburger span {
+  display: block;
+  height: 2px;
+  margin: 3px 0;
+  border-radius: 2px;
+  background: currentColor;
+}
+
+.dburger:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 3px;
+}
+
 .pm {
   position: relative
 }
@@ -689,15 +714,29 @@ th {
     grid-template-columns: 1fr;
   }
 
+  .dburger {
+    display: block;
+    margin-left: auto;
+    flex: none;
+  }
+
   .side,
   .side.pub {
-    position: sticky;
-    top: 64px;
-    z-index: 40;
+    position: fixed;
+    inset: 64px auto 0 0;
+    z-index: 55;
+    width: min(320px, 88vw);
     height: auto;
-    padding: 8px 10px;
-    overflow-x: auto;
-    overflow-y: hidden;
+    padding: 16px 14px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transform: translateX(-105%);
+    transition: transform .25s ease;
+    box-shadow: 0 16px 40px #0004;
+  }
+
+  .side.open {
+    transform: translateX(0);
   }
 
   .side.pub {
@@ -706,32 +745,30 @@ th {
 
   .side nav,
   .scard nav {
-    display: flex;
-    gap: 6px;
-    white-space: nowrap;
+    display: block;
+    white-space: normal;
   }
 
   .scard {
-    padding: 0;
-    border: 0;
-    box-shadow: none;
-    background: none;
+    padding: 16px;
   }
 
   .who,
-  .mini,
   .mg {
+    display: block;
+  }
+
+  .mini {
     display: none;
   }
 
   .mi {
-    flex: none;
-    margin: 0;
-    padding: 10px 14px 10px 30px;
+    margin: 0 0 4px;
+    padding: 12px 14px 12px 34px;
   }
 
   .mi:hover {
-    transform: none;
+    transform: translateX(4px);
   }
 
   .ge {

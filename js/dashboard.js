@@ -9,7 +9,26 @@
 
   /* ---------- Profile menu ---------- */
   const pb = $('.pb'),
-    pm = $('.pmenu');
+    pm = $('.pmenu'),
+    dburger = $('.dburger'),
+    dashboardSide = $('.side');
+
+  function dashboardMenu(open) {
+    dashboardSide.classList.toggle('open', open);
+    dburger.setAttribute('aria-expanded', open);
+    dburger.setAttribute('aria-label', open ? 'Close dashboard menu' : 'Open dashboard menu');
+  }
+
+  dburger.addEventListener('click', e => {
+    e.stopPropagation();
+    dashboardMenu(!dashboardSide.classList.contains('open'));
+  });
+  dashboardSide.addEventListener('click', e => {
+    if (e.target.closest('.mi')) dashboardMenu(false);
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) dashboardMenu(false);
+  });
 
   function menu(open) {
     pm.classList.toggle('open', open);
@@ -28,11 +47,17 @@
   });
   document.addEventListener('click', e => {
     if (!pm.contains(e.target)) menu(false);
+    if (dashboardSide.classList.contains('open') &&
+        !dashboardSide.contains(e.target) &&
+        !dburger.contains(e.target)) dashboardMenu(false);
   });
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
+      const sideWasOpen = dashboardSide.classList.contains('open');
+      dashboardMenu(false);
       menu(false);
-      pb.focus();
+      if (sideWasOpen) dburger.focus();
+      else pb.focus();
     }
   });
 

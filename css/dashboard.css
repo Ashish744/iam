@@ -710,13 +710,23 @@ th {
 }
 
 @media (max-width: 900px) {
+  .dn {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .dn .pm {
+    order: 2;
+    margin-left: auto;
+  }
+
   .dshell {
     grid-template-columns: 1fr;
   }
 
   .dburger {
     display: block;
-    margin-left: auto;
+    order: 3;
     flex: none;
   }
 

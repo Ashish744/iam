@@ -146,15 +146,23 @@
         ease: 'back.out(2)'
       });
       setTimeout(() => location.href = 'login.html', 2200);
-    } else { // contact + settings: show inline confirmation
+    } else { // contact + settings: show inline confirmation for 2s before clearing the form
       const ok = $('.ok-msg.inline', form);
-      form.reset();
-      $$('.fld', form).forEach(f => f.classList.remove('ok', 'bad'));
       ok.style.display = 'block';
       if (typeof gsap !== 'undefined') gsap.from(ok, {
         y: 10,
         opacity: 0
       });
+
+      setTimeout(() => {
+        form.reset();
+        $$('.fld', form).forEach(f => {
+          f.classList.remove('ok', 'bad');
+          const err = $('.err', f);
+          if (err) err.textContent = '';
+        });
+        ok.style.display = 'none';
+      }, 2000);
     }
   });
 })();

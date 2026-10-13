@@ -1152,11 +1152,16 @@ footer .wrap {
   display: block
 }
 
+footer h3 {
+  margin: 0 0 16px
+}
+
 footer ul {
   display: grid;
   gap: 10px;
   list-style: none;
-  padding: 0
+  padding: 0;
+  margin: 0
 }
 
 .footer-address {
